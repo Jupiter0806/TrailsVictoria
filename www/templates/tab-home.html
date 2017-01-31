@@ -1,0 +1,73 @@
+<ion-view view-title="{{title}}" ng-init="init()">
+  <ion-content>
+
+    <div class="my-form complex-search-form">
+      <div class="list">
+        <h4>Activities:</h4>
+
+        <!-- Walking -->
+        <div class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox" ng-model="inputs.searchOptions.activities.isWalkingSelected">
+          </label>
+          Walking
+          <img class="icon icon-right placeholder-icon align-right" ng-src="{{ACTIVITY_ICON_WALKING}}">
+        </div>
+
+        <!-- Cycling -->
+        <div class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox" ng-model="inputs.searchOptions.activities.isCyclingSelected">
+          </label>
+          Cycling
+          <img class="icon icon-right placeholder-icon align-right" ng-src="{{ACTIVITY_ICON_CYCLING}}">
+        </div>
+
+        <!-- Mountain Biking -->
+        <div class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox" ng-model="inputs.searchOptions.activities.isMountainBikingSelected">
+          </label>
+          Mountain Biking
+          <img class="icon icon-right placeholder-icon align-right" ng-src="{{ACTIVITY_ICON_MOUNTAIN_BIKING}}">
+        </div>
+
+        <!-- Horse Riding -->
+        <div class="item item-checkbox">
+          <label class="checkbox">
+            <input type="checkbox" ng-model="inputs.searchOptions.activities.isHorseRidingSelected">
+          </label>
+          Horse Riding
+          <img class="icon icon-right placeholder-icon align-right" ng-src="{{ACTIVITY_ICON_HORSE_RIDING}}">
+        </div>
+      </div>
+
+      <div class="list">
+        <h4>Options:</h4>
+
+        <!-- Driving Time-->
+        <div class="item">
+          <span>Driving Time:</span>
+          <input type="text" id="rangeDrivingTime" value="" name="range"/>
+        </div>
+
+        <!-- Trail Length-->
+        <div class="item">
+          <span>Trail Length:</span>
+          <input type="text" id="rangeTrailLength" value="" name="range"/>
+        </div>
+
+        <!-- Trail Difficulty -->
+        <div class="item">
+          <span>Trail Difficulty:</span>
+          <input type="text" id="rangeTrailDifficulty" value="" name="range"/>
+        </div>
+      </div>
+
+      <button class="button button-block button-positive" ng-click="search()">Search</button>
+    </div>
+
+
+
+  </ion-content>
+</ion-view>

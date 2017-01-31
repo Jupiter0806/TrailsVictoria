@@ -1,0 +1,8 @@
+.complex-search-form {
+  width: 90%;
+  margin: auto;
+}
+
+.complex-search-form .item-checkbox>img.align-right {
+  float: right;
+}
