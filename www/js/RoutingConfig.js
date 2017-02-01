@@ -57,9 +57,21 @@ TrailsVictoria.config(function($stateProvider, $urlRouterProvider) {
           controller: 'AccountCtrl'
         }
       }
-    });
+    })
+
+    .state('tab.test', {
+      url: '/test',
+      views: {
+        'tab-test': {
+          templateUrl: 'templates/tab-test.html',
+          controller: 'TestCtrl'
+        }
+      }
+    })
+
+  ;
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/home');
 
 });
